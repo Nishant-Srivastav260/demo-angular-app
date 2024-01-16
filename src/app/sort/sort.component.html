@@ -1,0 +1,14 @@
+<div>
+    <label for="apiUrlInput">API URL:</label>
+    <input id="apiUrlInput" type="text" [(ngModel)]="apiUrl" placeholder="Enter API URL">
+    <button (click)="sortArrays()">Sort Arrays</button>
+</div>
+
+<!-- <div *ngIf="sortedArrays"> -->
+<h2>Sorted Arrays</h2>
+<div *ngFor="let arr of sortedArrays">
+    [{{ arr.join(', ') }}]
+</div>
+
+<p>Time taken to sort: {{ timeNs }} nanoseconds</p>
+<!-- </div> -->
